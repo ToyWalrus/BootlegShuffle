@@ -2,6 +2,8 @@
 
 A mod for [**Cassette Beasts**](https://www.cassettebeasts.com/) that lets you adjust how often bootleg tapes appear. For installation instructions, see [the Mod User Guide](https://wiki.cassettebeasts.com/wiki/Modding:Mod_User_Guide).
 
+![BootlegShuffle image](BootlegShuffle.png)
+
 ## Features
 
 - Customize how often bootleg tapes appear in the game
