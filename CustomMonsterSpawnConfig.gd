@@ -85,8 +85,14 @@ func bootleg_shuffle_override(tape: TapeConfig):
 	
 	var mod_info: ContentInfo = DLC.mods_by_id["bootleg_shuffle"]
 	var weighted_choices = []
+	var total_weight := 0.0
 	for type in valid_types:
-		weighted_choices.append({ "type": type, "weight": mod_info.get(str(type) + "_rate") })
+		var weight = mod_info.get(str(type) + "_rate")
+		total_weight += weight
+		weighted_choices.append({ "type": type, "weight": weight })
+		
+	if total_weight <= 0.0:
+		return
 		
 	var choice = rand.weighted_choice(weighted_choices)
 	tape.type_override = [choice["type"]]
